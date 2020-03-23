@@ -36,9 +36,6 @@ var (
 	}
 )
 
-// TODO(dustin): !! Finish documentation.
-// TODO(dustin): !! Configure CI.
-
 // HeicExifContext is just a simple type-alias for a byte-array.
 type HeicExifContext []byte
 
