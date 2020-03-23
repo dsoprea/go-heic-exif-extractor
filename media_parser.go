@@ -29,6 +29,8 @@ const (
 )
 
 var (
+	// HeicBrands is the list of MP4 brands that are associated with HEIC
+	// streams.
 	HeicBrands = sort.StringSlice{
 		"mif1",
 		"msf1",
@@ -60,6 +62,7 @@ func (hec HeicExifContext) Exif() (rootIfd *exif.Ifd, data []byte, err error) {
 type HeicExifMediaParser struct {
 }
 
+// NewHeicExifMediaParser returns a new HeicExifMediaParser instance.
 func NewHeicExifMediaParser() *HeicExifMediaParser {
 	return new(HeicExifMediaParser)
 }
@@ -141,7 +144,7 @@ func (hemp *HeicExifMediaParser) ParseBytes(data []byte) (mc riimage.MediaContex
 	return mc, nil
 }
 
-// Parses the data to determine if it's a compatible format.
+// LooksLikeFormat parses the data to determine if it's a compatible format.
 func (hemp *HeicExifMediaParser) LooksLikeFormat(data []byte) bool {
 	// We need to assert that there's enough data to parse. Since the box that
 	// we care about is just about the first thing that is parsed, we shouldn't

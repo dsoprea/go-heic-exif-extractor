@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/dsoprea/go-heic-exif-extractor.svg?branch=master)](https://travis-ci.org/dsoprea/go-heic-exif-extractor)
 [![Coverage Status](https://coveralls.io/repos/github/dsoprea/go-heic-exif-extractor/badge.svg?branch=master)](https://coveralls.io/github/dsoprea/go-heic-exif-extractor?branch=master)
+[![Report Card](https://goreportcard.com/badge/github.com/dsoprea/go-heic-exif-extractor)](https://goreportcard.com/report/github.com/dsoprea/go-heic-exif-extractor)
 [![GoDoc](https://godoc.org/github.com/dsoprea/go-heic-exif-extractor?status.svg)](https://godoc.org/github.com/dsoprea/go-heic-exif-extractor)
 
 # Overview
