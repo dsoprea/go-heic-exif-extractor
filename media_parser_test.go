@@ -22,7 +22,7 @@ func TestNewHeicExifMediaParser(t *testing.T) {
 	NewHeicExifMediaParser()
 }
 
-func TestHeicExifParser_LooksLikeFormat__Hit(t *testing.T) {
+func TestHeicExifMediaParser_LooksLikeFormat__Hit(t *testing.T) {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithExif)
 
 	f, err := os.Open(filepath)
@@ -43,7 +43,7 @@ func TestHeicExifParser_LooksLikeFormat__Hit(t *testing.T) {
 	}
 }
 
-func TestHeicExifParser_LooksLikeFormat__Miss__EmptyData(t *testing.T) {
+func TestHeicExifMediaParser_LooksLikeFormat__Miss__EmptyData(t *testing.T) {
 	data := make([]byte, MinimumHeicStreamLengthForDetection)
 
 	hemp := new(HeicExifMediaParser)
@@ -54,7 +54,7 @@ func TestHeicExifParser_LooksLikeFormat__Miss__EmptyData(t *testing.T) {
 	}
 }
 
-func TestHeicExifParser_Parse_Hit(t *testing.T) {
+func TestHeicExifMediaParser_Parse_Hit(t *testing.T) {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithExif)
 
 	f, err := os.Open(filepath)
@@ -71,7 +71,7 @@ func TestHeicExifParser_Parse_Hit(t *testing.T) {
 	log.PanicIf(err)
 }
 
-func TestHeicExifParser_Parse_Miss(t *testing.T) {
+func TestHeicExifMediaParser_Parse_Miss(t *testing.T) {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithoutExif)
 
 	f, err := os.Open(filepath)
@@ -89,7 +89,7 @@ func TestHeicExifParser_Parse_Miss(t *testing.T) {
 	}
 }
 
-func TestHeicExifParser_ParseFile_Hit(t *testing.T) {
+func TestHeicExifMediaParser_ParseFile_Hit(t *testing.T) {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithExif)
 
 	hemp := new(HeicExifMediaParser)
@@ -101,7 +101,7 @@ func TestHeicExifParser_ParseFile_Hit(t *testing.T) {
 	log.PanicIf(err)
 }
 
-func TestHeicExifParser_ParseFile_Miss(t *testing.T) {
+func TestHeicExifMediaParser_ParseFile_Miss(t *testing.T) {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithoutExif)
 
 	hemp := new(HeicExifMediaParser)
@@ -114,7 +114,7 @@ func TestHeicExifParser_ParseFile_Miss(t *testing.T) {
 	}
 }
 
-func TestHeicExifParser_ParseBytes_Hit(t *testing.T) {
+func TestHeicExifMediaParser_ParseBytes_Hit(t *testing.T) {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithExif)
 
 	b, err := ioutil.ReadFile(filepath)
@@ -129,7 +129,7 @@ func TestHeicExifParser_ParseBytes_Hit(t *testing.T) {
 	log.PanicIf(err)
 }
 
-func TestHeicExifParser_ParseBytes_Miss(t *testing.T) {
+func TestHeicExifMediaParser_ParseBytes_Miss(t *testing.T) {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithoutExif)
 
 	b, err := ioutil.ReadFile(filepath)
@@ -145,7 +145,7 @@ func TestHeicExifParser_ParseBytes_Miss(t *testing.T) {
 	}
 }
 
-func ExampleHeicExifParser_LooksLikeFormat() {
+func ExampleHeicExifMediaParser_LooksLikeFormat() {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithExif)
 
 	f, err := os.Open(filepath)
@@ -167,7 +167,7 @@ func ExampleHeicExifParser_LooksLikeFormat() {
 	// true
 }
 
-func ExampleHeicExifParser_Parse() {
+func ExampleHeicExifMediaParser_Parse() {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithExif)
 
 	f, err := os.Open(filepath)
@@ -189,7 +189,7 @@ func ExampleHeicExifParser_Parse() {
 	// Ifd<ID=(0) IFD-PATH=[IFD] INDEX=(0) COUNT=(4) OFF=(0x0008) CHILDREN=(0) PARENT=(0x0000) NEXT-IFD=(0x0000)>
 }
 
-func ExampleHeicExifParser_ParseFile() {
+func ExampleHeicExifMediaParser_ParseFile() {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithExif)
 
 	hemp := new(HeicExifMediaParser)
@@ -206,7 +206,7 @@ func ExampleHeicExifParser_ParseFile() {
 	// Ifd<ID=(0) IFD-PATH=[IFD] INDEX=(0) COUNT=(4) OFF=(0x0008) CHILDREN=(0) PARENT=(0x0000) NEXT-IFD=(0x0000)>
 }
 
-func ExampleHeicExifParser_ParseBytes() {
+func ExampleHeicExifMediaParser_ParseBytes() {
 	filepath := path.Join(assetsPath, testImageRelFilepathWithExif)
 
 	b, err := ioutil.ReadFile(filepath)
