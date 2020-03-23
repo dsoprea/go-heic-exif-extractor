@@ -20,7 +20,7 @@ const (
 
 	// MinimumHeicStreamLengthForDetection describes the minimum amount of data
 	// required to detect HEIC content.
-	MinimumHeicStreamLengthForDetection = 3000
+	MinimumHeicStreamLengthForDetection = 1000
 
 	// HeicMimeType describes the theoretical, official HEIC mime-type
 	// (theoretical because it's not ubiquitously supported/known in tooling,
