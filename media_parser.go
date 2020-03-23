@@ -64,8 +64,7 @@ func NewHeicExifMediaParser() *HeicExifMediaParser {
 	return new(HeicExifMediaParser)
 }
 
-// Parse parses a stream using an `io.ReadSeeker`. `ec` should *actually* be a
-// `ExifContext`.
+// Parse parses a stream using an `io.ReadSeeker`.
 func (hemp *HeicExifMediaParser) Parse(rs io.ReadSeeker, size int) (mc riimage.MediaContext, err error) {
 	defer func() {
 		if state := recover(); state != nil {
@@ -95,8 +94,7 @@ func (hemp *HeicExifMediaParser) Parse(rs io.ReadSeeker, size int) (mc riimage.M
 	return HeicExifContext(rawExif), nil
 }
 
-// ParseFile parses a stream using a file. `ec` should *actually* be a
-// `ExifContext`.
+// ParseFile parses a stream using a file.
 func (hemp *HeicExifMediaParser) ParseFile(filepath string) (mc riimage.MediaContext, err error) {
 	defer func() {
 		if state := recover(); state != nil {
@@ -121,8 +119,7 @@ func (hemp *HeicExifMediaParser) ParseFile(filepath string) (mc riimage.MediaCon
 	return mc, nil
 }
 
-// ParseBytes parses a stream direct from bytes. `ec` should *actually* be
-// a `ExifContext`.
+// ParseBytes parses a stream direct from bytes.
 func (hemp *HeicExifMediaParser) ParseBytes(data []byte) (mc riimage.MediaContext, err error) {
 	defer func() {
 		if state := recover(); state != nil {
