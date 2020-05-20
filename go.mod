@@ -7,9 +7,9 @@ go 1.13
 // replace github.com/dsoprea/go-exif/v2 => ../go-exif/v2
 
 require (
-	github.com/dsoprea/go-exif/v2 v2.0.0-20200502203340-6aea10b45f4c
-	github.com/dsoprea/go-logging v0.0.0-20200502201358-170ff607885f
-	github.com/dsoprea/go-utility v0.0.0-20200424085841-d6691864fa10
+	github.com/dsoprea/go-exif/v2 v2.0.0-20200520183328-015129a9efd5
+	github.com/dsoprea/go-logging v0.0.0-20200517223158-a10564966e9d
+	github.com/dsoprea/go-utility v0.0.0-20200512094054-1abbbc781176
 	go4.org v0.0.0-20200411211856-f5505b9728dd
-	gopkg.in/yaml.v2 v2.2.8 // indirect
+	golang.org/x/net v0.0.0-20200520182314-0ba52f642ac2 // indirect
 )
