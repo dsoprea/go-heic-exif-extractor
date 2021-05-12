@@ -8,8 +8,9 @@ go 1.13
 
 require (
 	github.com/dsoprea/go-exif/v2 v2.0.0-20200520183328-015129a9efd5
+	github.com/dsoprea/go-exif/v3 v3.0.0-20210512043655-120bcdb2a55e // indirect
 	github.com/dsoprea/go-logging v0.0.0-20200517223158-a10564966e9d
-	github.com/dsoprea/go-utility v0.0.0-20200512094054-1abbbc781176
+	github.com/dsoprea/go-utility v0.0.0-20200711062821-fab8125e9bdf
 	go4.org v0.0.0-20200411211856-f5505b9728dd
 	golang.org/x/net v0.0.0-20200520182314-0ba52f642ac2 // indirect
 )
